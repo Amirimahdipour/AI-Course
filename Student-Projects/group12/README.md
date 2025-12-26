@@ -221,7 +221,7 @@ The bot will process the input and display movie recommendations in real time.
 
 ## Group Members
 - ## Saba Ghanadzadeh
-- ## Roxana Norouzbegi
+- Member 2
 - Member 3
 - Member 4
 - ## Negar Habibi
