@@ -3,12 +3,13 @@
 
 ## ℹ️ Project Information
 
-* 👥 **Group Members:** Fatemeh Mahoori 
+
 * 🎓 **Course:** Artificial intelligence
 * 👩‍🏫 **Instructor:** Dr. Maryam Haji Esmaeili 
 * 🏫 **Institution:** Tehran Markaz Islamic Azad University
 * 📅 **Date:** December 2025
 * 🚥 **Status:** ✅ Completed
+* 👥 **Group Members:** Fatemeh Mahoori 
 
 
 ---
@@ -62,9 +63,9 @@ A sophisticated chatbot designed to assist travelers with comprehensive Californ
 - Travel tips and practical information
 - City comparisons for better decision making
     
+---
 
-
-### **Core RASA Files**
+## Core RASA Files
 
 | File | Purpose | Key Components |
 |------|---------|----------------|
@@ -113,6 +114,7 @@ This is the brain of the chatbot, containing all business logic:
 | `requirements.txt` | Python dependencies (not shown but required) |
 
 
+---
 
 ## 🔧 API Integrations
 
@@ -122,7 +124,7 @@ This is the brain of the chatbot, containing all business logic:
 - **Data Retrieved**: Temperature, humidity, conditions, alerts
 - **Location**: California cities only
 
-### **2. Foursquare API (v3)**
+### **2. Foursquare API**
 - **Usage**: Search for points of interest
 - **Key Functions**: `_call_foursquare_api()`
 - **Data Retrieved**: Places, categories, ratings, addresses
@@ -170,20 +172,22 @@ california-travel-assistant/
 │   ├── 📄 nlu.yml          # Natural Language Understanding training data
 │   ├── 📄 rules.yml        # Conversation flow rules
 │   └── 📄 stories.yml      # Training conversation stories
+├── 📂 actions/             # Custom Action Server Directory
+│   └── 🐍 actions.py       # Main Python logic for API integrations
 ├── 📄 domain.yml           # Bot domain configuration (Slots, Actions, Responses)
 ├── 📄 config.yml           # Machine Learning pipeline & policies configuration
 ├── 📄 credentials.yml      # Authentication & Channel credentials
 ├── 📄 endpoints.yml        # Server endpoint configurations (Action server & Tracker)
-├── 🐍 actions.py           # Custom action server (The "Brain" for API integrations)
 ├── 📄 requirements.txt     # List of Python dependencies
 │
 └── 📂 frontend/            # Web Interface Files
     ├── 🌐 index.html       # Responsive HTML5 chat interface
     ├── 🎨 style.css        # California-themed CSS styling
     └── ⚡ script.js        # Frontend logic & Socket.IO communication
-
 ```
 
+
+---
 
 # California Travel Assistant Chatbot - Complete Guide
 
@@ -219,6 +223,8 @@ This is an AI-powered conversational chatbot designed to assist travelers with c
 ├── endpoints.yml # Server endpoint configurations
 └── requirements.txt # Python dependencies
 ```
+
+---
 
 ## 📁 Detailed File Explanations
 
@@ -321,7 +327,7 @@ class APIConfig
 
 #### **2. Mock Data & Action Overview**
 
-##### 🛠️ 1. MockData Class
+#### 🛠️ 1. MockData Class
 - 📝 Provides synthetic data for development/testing when APIs are unavailable  
 - 🎯 Generates realistic mock responses for weather, places, and events  
 - ⚡ Ensures chatbot functionality during API quota exhaustion or offline development
@@ -366,7 +372,7 @@ class APIConfig
 - **ActionDefaultFallback:** Primary fallback handler  
 - **ActionTwoStageFallback:** Ambiguity resolution mechanism  
 
----
+
 
 #### 🧰 3. Helper Functions
 
@@ -395,6 +401,79 @@ Modern, responsive web interface for interacting with the chatbot.
 - Mobile-responsive layout
 
 **Purpose**: Provides an intuitive user interface for the chatbot.
+
+#### 📄 index.html — User Interface Structure
+
+**Responsibilities:**
+- Defines the chat layout and visual structure
+- Contains the chat header, message area, input box, and quick action buttons
+- Loads external libraries and local assets
+
+**Key Features:**
+- California-themed UI (sun, palm tree, sea)
+- Chat header with bot identity and online status
+- Message container for user & bot messages
+- Typing indicator for realistic conversation flow
+- Quick action buttons for common queries
+- Fully responsive layout
+
+**Technologies Used:**
+- HTML5
+- Font Awesome (icons)
+- Google Fonts (Poppins)
+
+
+## 🎨 style.css — Styling & Animations
+
+**Responsibilities:**
+- Defines the visual identity of the chatbot
+- Ensures responsive behavior across devices
+- Adds animations and interactive feedback
+
+**Key Design Elements:**
+- CSS Variables for centralized theming
+- Gradient backgrounds and soft shadows
+- Distinct styles for user vs bot messages
+- Typing indicator animation
+- Hover effects and smooth transitions
+- Mobile-friendly responsive design
+
+**UI/UX Highlights:**
+- Clear separation between user and bot messages
+- Readable typography and spacing
+- Subtle decorative stickers for branding
+- Smooth message appearance animations
+
+
+
+## ⚙️ script.js — Client-Side Logic
+
+**Responsibilities:**
+- Handles user input and message rendering
+- Communicates with the Rasa backend
+- Manages typing effects and UI updates
+- Integrates with external APIs (optional)
+
+
+
+### 🔌 Rasa Integration
+
+The frontend communicates with the Rasa server using REST API:
+
+```javascript
+POST http://localhost:5005/webhooks/rest/webhook
+```
+
+
+## 🔄 Workflow
+
+1. User types a message
+2. Message is sent to Rasa via `fetch`
+3. Rasa processes the message (NLU + Core + Actions)
+4. Bot responses are returned as JSON
+5. Responses are rendered in the chat UI
+
+---
 
 ## 🧠 Model Training Process
 
@@ -451,6 +530,8 @@ Based on test results:
 - Fine-tune hyperparameters (epochs, batch size)
 - Update stories and rules based on conversation failures
 
+---
+
 # 🔄 Complete Project Workflow
 
 ## Phase 1: Setup & Configuration
@@ -462,7 +543,6 @@ Based on test results:
 * **Configuration:** Securely add your API keys into `actions.py`.
 * **Environment:** Finalize the development environment setup.
 
----
 
 ## Phase 2: Model Training & Development
 1.  **NLU Definition:** Define intents and entities based on specific use cases.
@@ -472,7 +552,6 @@ Based on test results:
 5.  **Training:** Execute `rasa train` to build the model.
 6.  **Local Testing:** Use `rasa shell` to interact with the bot and debug.
 
----
 
 ## Phase 3: Integration & Deployment
 1.  **Action Server:** Start the custom action server: `rasa run actions`.
@@ -481,7 +560,6 @@ Based on test results:
 4.  **E2E Testing:** Verify end-to-end functionality from the user interface.
 5.  **Production:** Deploy the stack to your production environment.
 
----
 
 ## Phase 4: Monitoring & Improvement
 * **Logging:** Collect and review user conversation logs.
@@ -493,7 +571,6 @@ Based on test results:
 ---
 
 ### 🚀 **Implementation Guide**
-
 
 
 📦 **Step 1: Install Python Dependencies**  
@@ -540,7 +617,9 @@ Once both servers are running, simply open the `index.html` file in your web bro
 ```bash
 python -m http.server 8000
 ```
+
 ---
+
 ## 🔄 End-to-End Example: How Rasa Files Work Together
 
 ### 🧑 User Input
@@ -577,7 +656,6 @@ The model decides to execute a custom action:
 
 - **`ActionGetWeather`**
 
----
 
 ## ⚙️ Step 3: `actions.py` — Executing Business Logic
 
@@ -589,7 +667,6 @@ Inside the action:
 - The OpenWeather API is called via `_call_openweather_api()`
 - If APIs are unavailable, **MockData** is used instead
 
----
 
 ## 🌐 Step 4: External API or MockData
 
@@ -610,6 +687,14 @@ Inside the action:
 
 ---
 
+## 📸 System Architecture & Date Flow
+
+
+<img width="2755" height="2712" alt="diagram_1" src="https://github.com/user-attachments/assets/c4aed3a8-b5c9-42a8-9951-960c1fbcb05e" />
+
+
+---
+
 ## 🧩 File Interaction Summary
 
 | Step | File Involved | Responsibility |
@@ -619,4 +704,11 @@ Inside the action:
 | 3 | `actions.py` | Execute logic & API calls |
 | 4 | APIs / MockData | Fetch or simulate data |
 | 5 | Frontend | Display response to user |
+
+---
+
+## ⚠️ Current Limitations & Future Work
+- Limited to California cities only
+- API rate limits may affect response speed
+- Event availability depends on Eventbrite coverage
 
