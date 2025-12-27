@@ -17,7 +17,7 @@
 1. **Iliya Nazmehr** (Principal Architect & Senior Backend Engineer)
 2. **Maryam Shahravi** (AI Engineering & Prompt Design)
 3. **User 3** (Database Architect)
-4. **User 4** (Software Requirement Analysis & UI/UX)
+4. **Negar abdollahi** (Software Requirement Analysis & UI/UX)
 5. **User 5** (Security Analyst & QA)
 
 ---

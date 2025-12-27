@@ -60,7 +60,7 @@ python "main.py"
 
 ## Team Members & Roles
 
-### 👨‍💼 Mahdi
+### 👨‍💼 Mahdi Poor Jahangiri
 **Role**: Documentation & Project Management
 - Created comprehensive README documentation
 - Developed requirements.txt file
@@ -78,13 +78,13 @@ python "main.py"
 - Improved code readability and maintainability
 - Documented function purposes and logic flow
 
-### ⚡ Omid
+### ⚡ Seyed Javad Hashemi
 **Role**: Code Optimization
 - Optimized detection parameters for better performance
 - Fine-tuned confidence calculation algorithms
 - Improved processing efficiency
 
-### 🔬 Morteza
+### 🔬 Morteza Noroozi
 **Role**: Research & Testing
 - Conducted extensive testing with different face types
 - Researched and validated eye color detection accuracy

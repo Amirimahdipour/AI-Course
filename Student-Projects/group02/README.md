@@ -1,164 +1,4 @@
 # Group 2
-
-## source code
-the following file contains the main n8n workflow used in this project:
-
-
-{
-  "name": "n8n telegram image",
-  "nodes": [
-    {
-      "parameters": {
-        "updates": [
-          "message"
-        ],
-        "additionalFields": {}
-      },
-      "type": "n8n-nodes-base.telegramTrigger",
-      "typeVersion": 1.2,
-      "position": [
-        1376,
-        240
-      ],
-      "id": "72fe64dc-c874-42d4-88f7-fff2656e1b74",
-      "name": "Telegram Trigger",
-      "webhookId": "a3bceba6-da22-4794-bb44-922f2e9b037b",
-      "credentials": {
-        "telegramApi": {
-          "id": "t9ZuvXhdIxlp5ud9",
-          "name": "Telegram account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "operation": "toBinary",
-        "sourceProperty": "data[0].b64_json",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.convertToFile",
-      "typeVersion": 1.1,
-      "position": [
-        1760,
-        240
-      ],
-      "id": "d755aa4a-d790-4846-bf8f-ddae71eb8c3e",
-      "name": "Convert to File"
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "https://router.huggingface.co/nebius/v1/images/generations",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "Bearer {{$env.HF_API_KEY}}"
-            }
-          ]
-        },
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "response_format",
-              "value": "b64_json"
-            },
-            {
-              "name": "prompt",
-              "value": "=\"{{ $json.message.text }}\""
-            },
-            {
-              "name": "model",
-              "value": "black-forest-labs/flux-dev"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "position": [
-        1584,
-        240
-      ],
-      "id": "31b905da-8265-4d5b-9a41-c8a48a244e67",
-      "name": "Create Image"
-    },
-    {
-      "parameters": {
-        "operation": "sendPhoto",
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "binaryData": true,
-        "additionalFields": {}
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        1920,
-        240
-      ],
-      "id": "7e650085-d987-4afa-8ed3-feb3224f5964",
-      "name": "Telegram",
-      "webhookId": "851fda81-1ae1-4350-a288-5823a7f3507b",
-      "credentials": {
-        "telegramApi": {
-          "id": "t9ZuvXhdIxlp5ud9",
-          "name": "Telegram account"
-        }
-      }
-    }
-  ],
-  "pinData": {},
-  "connections": {
-    "Telegram Trigger": {
-      "main": [
-        [
-          {
-            "node": "Create Image",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Convert to File": {
-      "main": [
-        [
-          {
-            "node": "Telegram",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Create Image": {
-      "main": [
-        [
-          {
-            "node": "Convert to File",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    }
-  },
-  "active": true,
-  "settings": {
-    "executionOrder": "v1"
-  },
-  "versionId": "449c31cc-e69f-477c-ad32-e8fc055fd361",
-  "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "18b1ed7f120aa14586cfdcccaebf39e081615446bc492bc6d7655eb45ce874d5"
-  },
-  "id": "6Y4YuW6UXAfZc66q",
-  "tags": []
-}
-=======
 Telegram AI Image Generator Bot
 
 Implementation using n8n and Hugging Face API
@@ -180,9 +20,9 @@ Users interact with the system via Telegram by sending a text prompt. The bot pr
 3. Project Team Members
 
 This project was developed by a group of five students:
-• Member 1: (Full Name)
+• Member 1: (ّFateme Parvane Sekam)
 • Member 2: (sara ghavidel)
-• Member 3: (Full Name)
+• Member 3: (Raha Motahari)
 • Member 4: (Full Name)
 • Member 5: (Full Name)
 
@@ -190,162 +30,220 @@ This project was developed by a group of five students:
 4. Team Members and Responsibilities
 
 Name Responsibility
-Fateme Parvane Sekam Workflow design and system architecture
-Sara ghavidel  API integration and configuration
-amir Hesam sanako Telegram bot setup and testing
-Raha  motahari Documentation and report preparation
-Zahra doozandeh Debugging, validation, and final testing
+Fateme Parvane Sekam _ Workflow design and system architecture
+Sara ghavidel _ API integration and configuration
+amir Hesam sanako _ Telegram bot setup and testing
+Raha  motahari _ Documentation and report preparation
+Zahra doozandeh _ Debugging, validation, and final testing
 
 
-5. Project Objectives
+5. Project Objectives 
 
-The main objectives of this project are:
-• Gaining practical experience with workflow automation systems
-• Integrating AI-based services via external APIs
-• Developing a functional Telegram bot
-• Understanding end-to-end AI service pipelines without heavy coding
+The primary objectives of this project are as follows:
+• To gain hands-on experience with workflow automation platforms, specifically n8n
+• To understand how AI-based services can be integrated into real-world applications using RESTful APIs
+• To design and deploy a fully functional Telegram bot capable of responding to user requests
+• To explore end-to-end AI service pipelines, from user input to AI inference and final output delivery
+• To minimize traditional coding by leveraging low-code / no-code automation tools
 
+This project emphasizes practical implementation over theoretical discussion, enabling students to experience how modern AI systems are deployed in production-like environments.
 
-6. System Architecture
+⸻
 
-The system follows an event-driven architecture:
-1. Telegram receives user input.
-2. n8n triggers the workflow.
-3. The input text is sent to an AI image generation API.
-4. The generated image is returned in Base64 format.
-5. The image is converted to a binary file.
-6. The final image is sent back to the user via Telegram.
+6. System Architecture 
 
+The system is based on an event-driven and modular architecture, ensuring scalability and maintainability.
 
-7. Technologies and Tools
-• n8n (Workflow Automation)
-• Telegram Bot API
-• Hugging Face Inference API
-• HTTP / REST
-• Base64 Image Encoding
+Workflow Steps:
+1. A user sends a text prompt to the Telegram bot
+2. Telegram triggers an event that activates the n8n workflow
+3. n8n forwards the prompt to the Hugging Face Image Generation API
+4. The AI model processes the input and generates an image
+5. The generated image is returned as a Base64-encoded string
+6. n8n converts the Base64 data into a binary image file
+7. The final image is sent back to the user through Telegram
 
+This architecture ensures clear separation of responsibilities between communication, processing, and response delivery.
 
-8. APIs and External Services
+⸻
+
+7. Technologies and Tools 
+
+The following technologies and tools were used in the development of this project:
+• n8n – Workflow automation and orchestration
+• Telegram Bot API – User interaction and message handling
+• Hugging Face Inference API – AI-powered image generation
+• HTTP / REST APIs – Communication between services
+• Base64 Encoding – Image data transmission and conversion
+
+Each technology was selected to ensure simplicity, reliability, and compatibility with modern AI pipelines.
+
+⸻
+
+8. APIs and External Services 
 
 8.1 Telegram Bot API
 
-Used to:
-• Receive user messages
-• Send generated images to users
+The Telegram Bot API is responsible for:
+• Receiving user text prompts
+• Triggering the automation workflow
+• Delivering generated images back to users
+
+Telegram provides a lightweight, reliable, and widely used platform for chatbot-based applications.
 
 8.2 Hugging Face Image Generation API
 • Provider: Hugging Face
 • Model: black-forest-labs/flux-dev
-• Task: Text-to-Image generation
+• Task: Text-to-Image Generation
 • Response Format: Base64-encoded image
 
+This API enables access to state-of-the-art image generation models without the need for local GPU resources.
+
+⸻
 
 9. n8n Workflow Description
+    
+The n8n workflow consists of a sequence of well-defined nodes:
 
 Telegram Trigger
-      ↓
+        ↓
 HTTP Request (Image Generation API)
-      ↓
-Convert Base64 to Binary File
-      ↓
+        ↓
+Base64 to Binary Conversion
+        ↓
 Telegram Send Photo
 
-Each node performs a single, well-defined task, ensuring modularity, clarity, and ease of maintenance.
+Each node performs a single responsibility, which improves:
+• Readability
+• Debugging
+• Maintainability
+• Future extensibility
 
+This modular design allows new features to be added with minimal changes to existing components.
 
-10. Project Structure
+⸻
 
-├── images/
-│   ├── result1.png
-│   ├── result2.png
+10. Project Structure 
+├── n8n_telegram_image.json
 ├── README.md
 
+• The images/ directory contains sample outputs generated by the bot
+• The workflow file defines the complete automation logic
+• The README file documents the project structure and usage
 
+⸻
 
 11. Sample Results
 
-11.1 Generated Image Example
+11.1 Generated Image Examples
 
-Sample images generated by the bot are available in the images/ directory.
-These images demonstrate the system’s ability to convert textual prompts into visual content.
+Sample images generated by the system are stored in the images/ directory.
+These results demonstrate the system’s ability to:
+• Interpret natural language prompts
+• Generate visually coherent images
+• Deliver outputs in near real-time
 
+The quality of generated images depends on the AI model and the specificity of the user prompt.
+image 1:
+<img width="578" height="486" alt="Screenshot 2025-12-25 182009" src="https://github.com/user-attachments/assets/210aa506-9174-43ed-b7c6-96578daf1d21" />
+image 2
+<img width="578" height="484" alt="Screenshot 2025-12-25 182113" src="https://github.com/user-attachments/assets/e808e63f-73e8-4b63-bb28-f48c2e42b6be" />
 
-12. Installation and Execution Guide
+⸻
+
+12. Installation and Execution Guide 
 
 12.1 Prerequisites
 • Installed n8n
-• A Telegram Bot Token (via BotFather)
-• A Hugging Face API Token
+ • A valid Telegram Bot Token (created via BotFather)
+ • A Hugging Face API Token
 
 12.2 Setup Steps
-1. Start n8n:
+ 1. Start n8n:
 
 n8n start
 
-2. Import the workflow file:
+ 2. Import the workflow file:
 
-• Import n8n telegram image.json into n8n
+ • Import n8n_telegram_image.json into the n8n dashboard
 
-3. Configure credentials:
+ 3. Configure credentials:
 
-• Telegram Bot Token
-• Hugging Face API Token
+ • Set Telegram Bot Token
+ • Set Hugging Face API Token
 
-4. Activate the workflow
+ 4. Activate the workflow
 
-
+⸻
 
 12.3 Running the Bot
-1. Open Telegram
-2. Send a text prompt to the bot
-3. Receive the generated image in response
+ 1. Open Telegram
+ 2. Send a text prompt to the bot
+ 3. Receive the generated image as a response
 
+The entire process is automated and requires no manual intervention after setup.
 
-13. Security Considerations
-• API tokens must not be committed to public repositories
-• Credentials are managed using n8n’s built-in credential system or environment variables
-• Access to sensitive data is restricted and controlled
+⸻
 
+13. Security Considerations 
+ • API tokens must never be committed to public repositories
+ • Credentials are securely managed using n8n’s credential system or environment variables
+ • Access to sensitive configuration data is restricted to authorized users only
 
+These measures help prevent unauthorized access and data leakage.
+
+⸻
 
 14. Testing and Evaluation
-• Tested with multiple textual prompts
-• Verified response time and image quality
-• Ensured stable and consistent workflow execution
 
+The system was evaluated using multiple test cases:
+ • Various text prompts with different levels of complexity
+ • Response time measurement
+ • Verification of image quality and consistency
+ • Stability testing under repeated requests
 
+The workflow demonstrated stable performance and consistent output quality.
+
+⸻
 
 15. Project Outcomes
-• Successful integration of AI-based image generation
-• Reliable Telegram bot interaction
-• Fully automated workflow with minimal manual intervention
+ • Successful deployment of an AI-powered image generation pipeline
+ • Seamless interaction between Telegram, n8n, and Hugging Face
+ • Fully automated system with minimal manual configuration
+ • Improved understanding of real-world AI service integration
 
+⸻
 
+16. Limitations
 
-16. Limitations (Free Trial Notice)
+⚠️ Free Trial Limitation Notice
 
-⚠️ This project uses third-party services that provide limited free trial access.
-As a result:
- • The system may only be available for a limited time
- • Image generation may stop after the trial period ends
- • These limitations depend on the service provider’s policies and are beyond the developers’ control
+This project relies on third-party services that offer limited free-tier access. Therefore:
+ • The system may be available only for a limited duration
+ • Image generation may stop once the free quota is exceeded
+ • These limitations depend entirely on external service providers
 
+The developers have no control over these constraints.
 
+⸻
 
 17. Future Improvements
- • Support for image size and style selection
- • Logging and monitoring of user requests
- • Database integration for image storage
- • User interface and interaction enhancements
 
+Potential enhancements for future versions include:
+ • Support for image size, style, and resolution selection
+ • User request logging and analytics
+ • Database integration for image storage and retrieval
+ • Enhanced user interaction and command-based controls
+ • Error handling and fallback mechanisms
 
+⸻
 
 18. License
 
-This project was developed for educational purposes only.
+This project was developed strictly for educational purposes as part of an academic course and is not intended for commercial use.
 
-
+⸻
 
 19. Acknowledgments
 
-Special thanks to the course instructor and all team members for their contributions.
+Special thanks to the course instructor for guidance and to all team members for their collaboration and contributions throughout the project.
