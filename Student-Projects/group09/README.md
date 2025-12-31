@@ -7,7 +7,7 @@
 2. Hanie Lari  
 3. Reihane Partovi
 4. Sara Eghdami
-5. M
+5. Mahsa mehabadi
 
 ## 🚀 Object Detection Web Application
 
