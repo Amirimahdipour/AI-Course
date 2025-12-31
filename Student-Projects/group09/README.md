@@ -6,8 +6,9 @@
 1. Hanie Asali (Team Leader)
 2. H  
 3. Reihane Partovi
-4. S
-5. M
+
+4. Sara Eghdami
+5. Mahsa mehabadi
 
 ## 🚀 Object Detection Web Application
 
