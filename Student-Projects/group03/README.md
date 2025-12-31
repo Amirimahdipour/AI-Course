@@ -7,10 +7,10 @@ A team project focused on predicting whether a bank loan application will be **a
 
 ## Team Members
 - **Kian Akbari (Team Lead)**
-- User 2
-- User 3 
-- User 4  
-- User 5
+- Mohammad ebrahimi
+- Nima Rahnavard
+- elika taheri
+- Farbod Sedighi 
 
 ---
 

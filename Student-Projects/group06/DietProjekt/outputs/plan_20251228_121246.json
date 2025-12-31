@@ -1,0 +1,152 @@
+{
+  "kcal_target": 1282,
+  "days": [
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "کره بادام‌زمینی + نان",
+          "kcal": 420
+        },
+        {
+          "type": "lunch",
+          "name": "ماکارونی با سس گوجه",
+          "kcal": 620
+        },
+        {
+          "type": "dinner",
+          "name": "خوراک مرغ/بوقلمون + سبزیجات",
+          "kcal": 540
+        }
+      ],
+      "total_kcal": 1580,
+      "target_kcal": 1282
+    },
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "عدسی",
+          "kcal": 380
+        },
+        {
+          "type": "lunch",
+          "name": "سالاد مرغ",
+          "kcal": 500
+        },
+        {
+          "type": "dinner",
+          "name": "سالاد تن ماهی",
+          "kcal": 520
+        }
+      ],
+      "total_kcal": 1400,
+      "target_kcal": 1282
+    },
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "ماست + میوه",
+          "kcal": 300
+        },
+        {
+          "type": "lunch",
+          "name": "عدس‌پلو",
+          "kcal": 650
+        },
+        {
+          "type": "dinner",
+          "name": "سوپ سبزیجات + نان",
+          "kcal": 450
+        }
+      ],
+      "total_kcal": 1400,
+      "target_kcal": 1282
+    },
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "دو عدد تخم‌مرغ + نان",
+          "kcal": 380
+        },
+        {
+          "type": "lunch",
+          "name": "قورمه‌سبزی (کم‌روغن) + برنج",
+          "kcal": 700
+        },
+        {
+          "type": "dinner",
+          "name": "کوکو سبزی",
+          "kcal": 500
+        }
+      ],
+      "total_kcal": 1580,
+      "target_kcal": 1282
+    },
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "نان و پنیر و گردو",
+          "kcal": 400
+        },
+        {
+          "type": "lunch",
+          "name": "خوراک لوبیا چیتی + نان",
+          "kcal": 550
+        },
+        {
+          "type": "dinner",
+          "name": "ماهی + سبزیجات",
+          "kcal": 550
+        }
+      ],
+      "total_kcal": 1500,
+      "target_kcal": 1282
+    },
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "ماست + میوه",
+          "kcal": 300
+        },
+        {
+          "type": "lunch",
+          "name": "برنج + مرغ",
+          "kcal": 650
+        },
+        {
+          "type": "dinner",
+          "name": "املت",
+          "kcal": 420
+        }
+      ],
+      "total_kcal": 1370,
+      "target_kcal": 1282
+    },
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "کره بادام‌زمینی + نان",
+          "kcal": 420
+        },
+        {
+          "type": "lunch",
+          "name": "عدس‌پلو",
+          "kcal": 650
+        },
+        {
+          "type": "dinner",
+          "name": "کوکو سبزی",
+          "kcal": 500
+        }
+      ],
+      "total_kcal": 1570,
+      "target_kcal": 1282
+    }
+  ]
+}
