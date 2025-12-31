@@ -1,0 +1,287 @@
+{
+  "kcal_target": 2157,
+  "days": [
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "نان و پنیر و گردو",
+          "kcal": 400
+        },
+        {
+          "type": "lunch",
+          "name": "سالاد مرغ",
+          "kcal": 500
+        },
+        {
+          "type": "dinner",
+          "name": "خوراک مرغ/بوقلمون + سبزیجات",
+          "kcal": 540
+        },
+        {
+          "type": "snack",
+          "name": "خرما (۲ عدد)",
+          "kcal": 80
+        },
+        {
+          "type": "snack",
+          "name": "چای + بیسکویت (کم)",
+          "kcal": 160
+        },
+        {
+          "type": "snack",
+          "name": "شیر",
+          "kcal": 140
+        },
+        {
+          "type": "snack",
+          "name": "ماست",
+          "kcal": 150
+        }
+      ],
+      "total_kcal": 1970,
+      "target_kcal": 2157
+    },
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "ماست + میوه",
+          "kcal": 300
+        },
+        {
+          "type": "lunch",
+          "name": "ماکارونی با سس گوجه",
+          "kcal": 620
+        },
+        {
+          "type": "dinner",
+          "name": "سالاد تن ماهی",
+          "kcal": 520
+        },
+        {
+          "type": "snack",
+          "name": "مغزها (۳۰ گرم)",
+          "kcal": 180
+        },
+        {
+          "type": "snack",
+          "name": "میوه",
+          "kcal": 120
+        },
+        {
+          "type": "snack",
+          "name": "ماست",
+          "kcal": 150
+        },
+        {
+          "type": "snack",
+          "name": "خرما (۲ عدد)",
+          "kcal": 80
+        }
+      ],
+      "total_kcal": 1970,
+      "target_kcal": 2157
+    },
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "عدسی",
+          "kcal": 380
+        },
+        {
+          "type": "lunch",
+          "name": "قورمه‌سبزی (کم‌روغن) + برنج",
+          "kcal": 700
+        },
+        {
+          "type": "dinner",
+          "name": "سوپ سبزیجات + نان",
+          "kcal": 450
+        },
+        {
+          "type": "snack",
+          "name": "خرما (۲ عدد)",
+          "kcal": 80
+        },
+        {
+          "type": "snack",
+          "name": "خرما (۲ عدد)",
+          "kcal": 80
+        },
+        {
+          "type": "snack",
+          "name": "میوه",
+          "kcal": 120
+        },
+        {
+          "type": "snack",
+          "name": "مغزها (۳۰ گرم)",
+          "kcal": 180
+        }
+      ],
+      "total_kcal": 1990,
+      "target_kcal": 2157
+    },
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "کره بادام‌زمینی + نان",
+          "kcal": 420
+        },
+        {
+          "type": "lunch",
+          "name": "عدس‌پلو",
+          "kcal": 650
+        },
+        {
+          "type": "dinner",
+          "name": "ماهی + سبزیجات",
+          "kcal": 550
+        },
+        {
+          "type": "snack",
+          "name": "چای + بیسکویت (کم)",
+          "kcal": 160
+        },
+        {
+          "type": "snack",
+          "name": "ماست",
+          "kcal": 150
+        },
+        {
+          "type": "snack",
+          "name": "مغزها (۳۰ گرم)",
+          "kcal": 180
+        }
+      ],
+      "total_kcal": 2110,
+      "target_kcal": 2157
+    },
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "دو عدد تخم‌مرغ + نان",
+          "kcal": 380
+        },
+        {
+          "type": "lunch",
+          "name": "خوراک لوبیا چیتی + نان",
+          "kcal": 550
+        },
+        {
+          "type": "dinner",
+          "name": "کوکو سبزی",
+          "kcal": 500
+        },
+        {
+          "type": "snack",
+          "name": "خرما (۲ عدد)",
+          "kcal": 80
+        },
+        {
+          "type": "snack",
+          "name": "چای + بیسکویت (کم)",
+          "kcal": 160
+        },
+        {
+          "type": "snack",
+          "name": "چای + بیسکویت (کم)",
+          "kcal": 160
+        },
+        {
+          "type": "snack",
+          "name": "مغزها (۳۰ گرم)",
+          "kcal": 180
+        }
+      ],
+      "total_kcal": 2010,
+      "target_kcal": 2157
+    },
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "عدسی",
+          "kcal": 380
+        },
+        {
+          "type": "lunch",
+          "name": "برنج + مرغ",
+          "kcal": 650
+        },
+        {
+          "type": "dinner",
+          "name": "املت",
+          "kcal": 420
+        },
+        {
+          "type": "snack",
+          "name": "ماست",
+          "kcal": 150
+        },
+        {
+          "type": "snack",
+          "name": "چای + بیسکویت (کم)",
+          "kcal": 160
+        },
+        {
+          "type": "snack",
+          "name": "خرما (۲ عدد)",
+          "kcal": 80
+        },
+        {
+          "type": "snack",
+          "name": "ماست",
+          "kcal": 150
+        }
+      ],
+      "total_kcal": 1990,
+      "target_kcal": 2157
+    },
+    {
+      "meals": [
+        {
+          "type": "breakfast",
+          "name": "دو عدد تخم‌مرغ + نان",
+          "kcal": 380
+        },
+        {
+          "type": "lunch",
+          "name": "ماکارونی با سس گوجه",
+          "kcal": 620
+        },
+        {
+          "type": "dinner",
+          "name": "ماهی + سبزیجات",
+          "kcal": 550
+        },
+        {
+          "type": "snack",
+          "name": "ماست",
+          "kcal": 150
+        },
+        {
+          "type": "snack",
+          "name": "خرما (۲ عدد)",
+          "kcal": 80
+        },
+        {
+          "type": "snack",
+          "name": "شیر",
+          "kcal": 140
+        },
+        {
+          "type": "snack",
+          "name": "خرما (۲ عدد)",
+          "kcal": 80
+        }
+      ],
+      "total_kcal": 2000,
+      "target_kcal": 2157
+    }
+  ]
+}
