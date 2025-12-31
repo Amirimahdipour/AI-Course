@@ -4,9 +4,9 @@
 
 ## GROUP 9 
 1. Hanie Asali (Team Leader)
-2. H  
+2. Hanie Lari  
 3. Reihane Partovi
-4. S
+4. Sara Eghdami
 5. M
 
 ## 🚀 Object Detection Web Application
